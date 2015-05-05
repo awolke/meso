@@ -15,3 +15,8 @@ sudo service zookeeper stop
 sudo sh -c "echo manual > /etc/init/zookeeper.override"
 
 sudo nano /etc/mesos/zk
+zk://192.168.12.202:2181,192.168.12.201:2181,192.168.12.230:2181/mesos
+
+# Disable mesos-master service
+sudo service mesos-master stop
+sudo sh -c "echo manual > /etc/init/mesos-master.override"
