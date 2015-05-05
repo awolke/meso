@@ -1,4 +1,4 @@
-# This is the Setup Script for the Ubuntu Slave Node -
+# Setup
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv E56151BF
 DISTRO=$(lsb_release -is | tr '[:upper:]' '[:lower:]')
 CODENAME=$(lsb_release -cs)
@@ -13,3 +13,5 @@ sudo apt-get -y install mesos
 # For the Slave-Nodes we don't Need Zookeeper
 sudo service zookeeper stop
 sudo sh -c "echo manual > /etc/init/zookeeper.override"
+
+sudo nano /etc/mesos/zk
