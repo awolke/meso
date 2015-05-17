@@ -15,4 +15,4 @@ echo "deb http://repos.mesosphere.io/${DISTRO} ${CODENAME} main" | sudo tee /etc
 sudo apt-get update -y
 
 # Installing Meso & Marathon (Zookeeper is also installed with the Ubuntu setup)
-sudo apt-get -y install mesos marathon
+sudo apt-get -y install mesosphere
